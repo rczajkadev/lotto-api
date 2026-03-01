@@ -69,7 +69,7 @@ jobs:
           zip -r ../${{ env.FUNCTION_APP_ZIP_NAME }} .
 
       - name: Upload Function App Artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ env.FUNCTION_APP_ARTIFACT_NAME }}
           path: ${{ env.FUNCTION_APP_ZIP_NAME }}
@@ -149,7 +149,7 @@ jobs:
 
     steps:
       - name: Download Function App Artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: ${{ env.FUNCTION_APP_ARTIFACT_NAME }}
           path: functionapp
